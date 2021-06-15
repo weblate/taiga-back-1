@@ -17,11 +17,11 @@ router.register(r"locales", LocalesViewSet, base_name="locales")
 
 
 # Users & Roles
-from taiga.auth.api import AuthViewSet
+from taiga.auth_old.api import AuthViewSet
 from taiga.users.api import UsersViewSet
 from taiga.users.api import RolesViewSet
 
-router.register(r"auth", AuthViewSet, base_name="auth")
+router.register(r"auth_old", AuthViewSet, base_name="auth")
 router.register(r"users", UsersViewSet, base_name="users")
 router.register(r"roles", RolesViewSet, base_name="roles")
 

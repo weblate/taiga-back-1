@@ -27,7 +27,7 @@ from django.utils.translation import ugettext_lazy as _
 from taiga.base.db.models.fields import JSONField
 from django_pglocks import advisory_lock
 
-from taiga.auth.tokens import get_token_for_user
+from taiga.auth_old.tokens import get_token_for_user
 from taiga.base.utils.colors import generate_random_hex_color
 from taiga.base.utils.slug import slugify_uniquely
 from taiga.base.utils.files import get_file_path

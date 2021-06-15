@@ -17,12 +17,12 @@ from taiga.base import exceptions as exc
 from taiga.base import filters
 from taiga.base import response
 from taiga.base.utils.dicts import into_namedtuple
-from taiga.auth.tokens import get_user_for_token
+from taiga.auth_old.tokens import get_user_for_token
 from taiga.base.decorators import list_route
 from taiga.base.decorators import detail_route
-from taiga.base.api import ModelCrudViewSet
-from taiga.base.api.mixins import BlockedByProjectMixin
 from taiga.base.api.fields import validate_user_email_allowed_domains
+from taiga.base.api.mixins import BlockedByProjectMixin
+from taiga.base.api.viewsets import ModelCrudViewSet
 from taiga.base.api.utils import get_object_or_404
 from taiga.base.filters import MembersFilterBackend
 from taiga.base.mails import mail_builder

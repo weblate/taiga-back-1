@@ -10,7 +10,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.urls import path
 
-
+from taiga.auth.urls import urls as auth_urls
 from .routers import router
 
 
@@ -20,6 +20,7 @@ from .routers import router
 
 urlpatterns = [
     path('api/v1/', include(router.urls)),
+    path('api/v1/auth/', include(auth_urls)),
     path('admin/', admin.site.urls),
 ]
 

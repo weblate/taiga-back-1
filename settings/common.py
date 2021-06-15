@@ -319,6 +319,7 @@ INSTALLED_APPS = [
     "taiga.front",
     "taiga.users",
     "taiga.userstorage",
+    "taiga.auth.token_blacklist",
     "taiga.external_apps",
     "taiga.projects",
     "taiga.projects.references",
@@ -458,10 +459,11 @@ MAX_AGE_CANCEL_ACCOUNT = 30 * 24 * 60 * 60  # 30 days in seconds
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         # Mainly used by taiga-front
-        "taiga.auth.backends.Token",
+        #"taiga.auth.backends.Token",
+        'taiga.auth.authentication.JWTAuthentication',
 
         # Mainly used for api debug.
-        "taiga.auth.backends.Session",
+        "taiga.auth_old.backends.Session",
 
         # Application tokens auth
         "taiga.external_apps.auth_backends.Token",
